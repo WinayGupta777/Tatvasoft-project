@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.navbar {
+.navbar,.searchbar {
   height: 92px;
   background-color: aliceblue;
   display: flex;
@@ -59,4 +59,50 @@ img {
 .cartTxt,.itemTxt {
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#inp {
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 10px;
+  height: 40px;
+  width: 422px;
+  outline-color: rgb(94, 92, 92);
+  border-radius: 6px;
+  border: 2px solid rgb(172, 172, 172);
+}
+#submit, #cancel {
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  height: 42px;
+  width: 130px;
+  max-width: 139px;
+  border-radius: 6px;
+  margin: 0 0 0 10px;
+}
+#submit i {
+  color: aliceblue;
+  font-size: 23px;
+}
+#submit {background-color: rgb(32, 228, 49);border: 1px solid rgb(32,228,49); padding-right: 7px;}
+#cancel {background-color: rgb(253, 40, 40);border: 1px solid rgb(253, 40, 40); }
+#submit:hover {background-color: rgb(27, 189, 41);border: 1px solid rgb(32,228,49); }
+#cancel:hover {background-color: rgb(214, 32, 32);border: 1px solid rgb(253, 40, 40); }
+
+.footerbox {
+  color: rgb(85, 85, 85);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 200px;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
