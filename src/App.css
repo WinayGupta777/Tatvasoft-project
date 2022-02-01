@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  height: 92px;
+  background-color: aliceblue;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lside {
+  margin-left: 50px;
+  height: 55px;
+  width: auto;
+}
+img {
+  height: 55px;
+}
+
+.rside{
+  margin-right: 50px;
+  height: 60px;
+  width: 300px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#link {
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgb(255, 73, 73);
+}
+#liti {
+  height: 15px;
+  width: 2px;
+  background-color: rgb(125, 128, 128);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cartbox {
+  height: 40px;
+  width: 110px;
+  border-radius: 7px;
+  border: 2px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.fa{
+  font-size: 25px;
+  color: rgb(255, 73, 73);
+  margin: 0 5px;
+}
+.cartTxt,.itemTxt {
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
