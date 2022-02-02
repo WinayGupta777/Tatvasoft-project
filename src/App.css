@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito&family=Quicksand:wght@300&family=Red+Hat+Mono&family=Roboto:wght@400;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto','sans-serif';
 }
 
 .navbar,.searchbar {
@@ -87,10 +90,7 @@ img {
   border-radius: 6px;
   margin: 0 0 0 10px;
 }
-#submit i {
-  color: aliceblue;
-  font-size: 23px;
-}
+#submit i {color: aliceblue;font-size: 23px;}
 #submit {background-color: rgb(32, 228, 49);border: 1px solid rgb(32,228,49); padding-right: 7px;}
 #cancel {background-color: rgb(253, 40, 40);border: 1px solid rgb(253, 40, 40); }
 #submit:hover {background-color: rgb(27, 189, 41);border: 1px solid rgb(32,228,49); }
@@ -106,3 +106,50 @@ img {
   align-items: center;
   justify-content: center;
 }
+
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-size: 45px;
+  font-weight: 500;
+  background-color: white;
+}
+
+.edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-area {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 40px;
+}
+.input-area .ibox {
+  padding: 3px 10px;
+  font-size: 25px;
+  width: 430px;
+  outline-color: rgb(94, 92, 92);
+  border-radius: 4px;
+  border: 2px solid rgb(172, 172, 172);
+}
+
+/* save-cancle */
+.svcl button{ 
+  color: white;
+  margin: 40px 5px 60px 5px;
+  height: 45px;
+  width: 130px;
+  font-size: 25px;
+  border-radius: 5px;
+}
+.svcl button:nth-child(1) {background-color: rgb(32, 228, 49);border: 2px solid rgb(32, 228, 49);}
+.svcl button:nth-child(2) {background-color: rgb(255, 73, 73);border: 2px solid rgb(255,73,73);}
+
+
+.svcl button:nth-child(1):hover {background-color: rgb(27, 189, 41);border: 1px solid rgb(32,228,49); }
+.svcl button:nth-child(2):hover {background-color: rgb(214, 32, 32);border: 1px solid rgb(253, 40, 40); }
