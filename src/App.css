@@ -201,6 +201,10 @@ img {
   border: 1px solid rgb(255, 27, 27);
   background-color: rgb(250, 83, 83);
 }
+.flat3 .cntr #cnt {
+  padding: 0 9px;
+  width: fit-content;
+}
 .flat3 .cntr button:nth-child(1),button:nth-child(3) {color: white;}
 .flat3 .cntr button:nth-child(2) {background-color: white;}
 .flat3 .cntr button:nth-child(1):hover,button:nth-child(3):hover {background-color: rgb(226, 0, 0);}
@@ -216,3 +220,16 @@ img {
 }
 .flat3 #rm:hover {cursor: pointer;  border: 2px solid rgb(255, 77, 77);}
 
+#placeorder {
+  cursor: pointer;
+  margin-bottom: 80px;
+  height: 45px;
+  width: 149px;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 73, 73);
+  background-color: rgb(255, 73, 73);
+}
+#placeorder:hover {background-color: rgb(238, 9, 9);}
