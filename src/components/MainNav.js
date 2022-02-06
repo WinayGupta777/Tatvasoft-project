@@ -10,7 +10,7 @@ const NavBar=()=>{
                 <a id="link" href="#">Login</a><span id="liti"></span>
                 <a id="link" href="#">Register</a>
                 <div className="cartbox">
-                    <i class="fa fa-shopping-cart"></i>
+                    <i className="fa fa-shopping-cart"></i>
                     <span className="itemTxt">0</span>
                     <span className="cartTxt">Cart</span>
                 </div>
