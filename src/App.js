@@ -10,7 +10,7 @@ const App=()=>{
     <>
       <NavBar />
       <SearchBar />
-      <CartPage />
+      <ProductPage />
       <Footer />
     </>
   );

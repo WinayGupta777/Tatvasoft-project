@@ -6,7 +6,7 @@
   font-family: 'Roboto','sans-serif';
 }
 
-.navbar,.searchbar {
+.navbar,.searchbar, .pro-search {
   height: 92px;
   background-color: aliceblue;
   display: flex;
@@ -69,7 +69,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-#inp {
+#inp, #inpPro {
   font-size: 20px;
   font-style: italic;
   padding-left: 10px;
@@ -97,6 +97,7 @@ img {
 #cancel:hover {background-color: rgb(214, 32, 32);border: 1px solid rgb(253, 40, 40); }
 
 .footerbox {
+  margin-top: 80px;
   color: rgb(85, 85, 85);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 200px;
@@ -222,7 +223,6 @@ img {
 
 #placeorder {
   cursor: pointer;
-  margin-bottom: 80px;
   height: 45px;
   width: 149px;
   color: white;
@@ -233,3 +233,11 @@ img {
   background-color: rgb(255, 73, 73);
 }
 #placeorder:hover {background-color: rgb(238, 9, 9);}
+
+.pro-search {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 230px;
+}
+#inpPro { width: 250px; margin-right: 10px;}
