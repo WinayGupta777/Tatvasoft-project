@@ -11,7 +11,7 @@ const App=()=>{
     <>
       <NavBar />
       <SearchBar />
-      <ProductListingPage />
+      <CartPage />
       <Footer />
     </>
   );
