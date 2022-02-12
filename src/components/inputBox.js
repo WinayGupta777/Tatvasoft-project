@@ -1,3 +1,5 @@
+import styles from "./InputBox.css";
+
 const InputBox=(props)=>{
     return(
         <div className="ibox">

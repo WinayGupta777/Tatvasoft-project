@@ -1,5 +1,6 @@
 import Card from "./CartCard";
 import TitleBar from "./TitleBar";
+import styles from "./CartPage.css"
 
 const cartItems=[
     {

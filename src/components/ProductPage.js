@@ -1,7 +1,7 @@
 import TitleBar from "./TitleBar";
 import ProductSearch from "./ProductSearchBar";
 import ListChild from "./ProductListChild";
-
+import styles from "./ProductPage.css"
 
 const ProductPage=()=>{
     const jsonFile = [

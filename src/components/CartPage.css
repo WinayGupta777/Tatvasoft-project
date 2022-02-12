@@ -1,0 +1,80 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin: 20px 0;
+    height: 150px;
+    width: 550px;
+    border: 2px solid rgb(148, 148, 148);
+    border-radius: 7px;
+    color: rgb(68, 67, 67);
+    background-color: rgb(255, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  .card .thumb {
+    margin: 0 15px;
+    height: 117px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: black;
+  }
+  .card .details {width: 345px; padding: 0 10px;}
+  .card .details .flat, .flat2, .flat3{
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+  }
+  .flat2 {font-size: 18px;color: rgb(255, 27, 27);}
+  #originPrice { text-decoration: line-through; margin-right: 10px;}
+  
+  .flat3 .cntr button{
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+    font-size: 19px;
+    border-radius: 4px;
+    border: 1px solid rgb(255, 27, 27);
+    background-color: rgb(250, 83, 83);
+  }
+  .flat3 .cntr #cnt {
+    padding: 0 9px;
+    width: fit-content;
+  }
+  .flat3 .cntr button:nth-child(1),button:nth-child(3) {color: white;}
+  .flat3 .cntr button:nth-child(2) {background-color: white;}
+  .flat3 .cntr button:nth-child(1):hover,button:nth-child(3):hover {background-color: rgb(226, 0, 0);}
+  
+  .flat3 #rm{
+    background-color: transparent;
+    color: rgba(255, 0, 0, 0.931);
+    width: 80px;
+    height: 30px;
+    font-size: 19px;
+    border-radius: 4px;
+    border: none;
+  }
+  .flat3 #rm:hover {cursor: pointer;  border: 2px solid rgb(255, 77, 77);}
+  
+  #placeorder {
+    cursor: pointer;
+    height: 45px;
+    width: 149px;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 73, 73);
+    background-color: rgb(255, 73, 73);
+  }
+  #placeorder:hover {background-color: rgb(238, 9, 9);}
+  
+  

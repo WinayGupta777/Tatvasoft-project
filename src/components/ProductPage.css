@@ -1,0 +1,51 @@
+
+/* product page */
+.product { padding: 0 200px; }
+.pro-search {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+#inpPro { width: 250px; margin-right: 10px;}
+.row{
+  height: 80px;
+  border-bottom: 2px solid rgb(124, 123, 123);
+  display: flex;
+}
+#id, #title ,#desc, #query{
+  font-size: 24px;
+  padding-left: 20px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+#id {width: 100px;}
+#title {width: 200px;}
+#desc {width: 300px;}
+#query {width: 450px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;}
+#two-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+}
+
+#tbtn {
+  margin: 0  4px;
+  border-radius: 5px;
+  font-size: 24px;
+  height: 45px;
+  width: 100px;
+  cursor: pointer;
+  background-color: transparent;
+}
+#tbtn:nth-child(1){color: rgb(4, 255, 100); border: 2px solid rgb(4, 255, 100);}
+#tbtn:nth-child(2){color: rgb(255, 79, 26); border: 2px solid rgb(255, 79, 26);}
+
+#tbtn:nth-child(1):hover {color: rgb(27, 189, 41);border: 3px solid rgb(32,228,49); }
+#tbtn:nth-child(2):hover {color: rgb(214, 32, 32);border: 3px solid rgb(253, 40, 40); }
+

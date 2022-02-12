@@ -1,5 +1,6 @@
-import InputBox from "../inputBox";
+import InputBox from "./inputBox";
 import TitleBar from "./TitleBar";
+import styles from "./LoginPage.css";
 
 const LoginPage = () => {
     return (

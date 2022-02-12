@@ -13,7 +13,12 @@ const App=()=>{
     <>
       <NavBar />
       <SearchBar />
+      <LoginPage />
       <RegisterPage />
+      <ProductPage />
+      <EditPage />
+      <ProductListingPage />
+      <CartPage />
       <Footer />
     </>
   );

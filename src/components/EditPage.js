@@ -1,4 +1,5 @@
 import TitleBar from "./TitleBar";
+import styles from "./EditPage.css"
 
 const EditPage=()=>{
     return(

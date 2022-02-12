@@ -1,5 +1,6 @@
 import TitleBar from "./TitleBar";
-import InputBox from "../inputBox";
+import InputBox from "./inputBox";
+import styles from "./RegisterPage.css"
 
 const RegisterPage = () => {
     return (
