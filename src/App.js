@@ -5,13 +5,14 @@ import ProductListingPage from "./components/ProductListingPage";
 import ProductPage from "./components/ProductPage";
 import EditPage from "./components/EditPage";
 import CartPage from "./components/CartPage";
+import LoginPage from "./components/LoginPage";
 import styles from "./App.css";
 const App=()=>{
   return(
     <>
       <NavBar />
       <SearchBar />
-      <CartPage />
+      <LoginPage />
       <Footer />
     </>
   );

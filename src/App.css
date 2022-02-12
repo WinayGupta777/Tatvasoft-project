@@ -140,7 +140,7 @@ img {
 }
 
 /* save-cancle */
-.svcl button{ 
+button{ 
   color: white;
   margin: 40px 5px 60px 5px;
   height: 45px;
@@ -148,12 +148,12 @@ img {
   font-size: 25px;
   border-radius: 5px;
 }
-.svcl button:nth-child(1) {background-color: rgb(32, 228, 49);border: 2px solid rgb(32, 228, 49);}
-.svcl button:nth-child(2) {background-color: rgb(255, 73, 73);border: 2px solid rgb(255,73,73);}
+button:nth-child(1) {background-color: rgb(32, 228, 49);border: 2px solid rgb(32, 228, 49);}
+button:nth-child(2) {background-color: rgb(255, 73, 73);border: 2px solid rgb(255,73,73);}
 
 
-.svcl button:nth-child(1):hover {background-color: rgb(27, 189, 41);border: 1px solid rgb(32,228,49); }
-.svcl button:nth-child(2):hover {background-color: rgb(214, 32, 32);border: 1px solid rgb(253, 40, 40); }
+button:nth-child(1):hover {background-color: rgb(27, 189, 41);border: 1px solid rgb(32,228,49); }
+button:nth-child(2):hover {background-color: rgb(214, 32, 32);border: 1px solid rgb(253, 40, 40); }
 
 .cart {
   display: flex;
@@ -369,3 +369,79 @@ img {
 }
 .add2cart {display: flex;align-items: center;justify-content: center;}
 .add2cart > button:hover {background-color: rgb(214, 32, 32);border: 1px solid rgb(253, 40, 40); }
+
+
+/* Login page css */
+.Login{
+  margin-top: 50px;
+  padding: 0 200px;
+}
+.Main-content{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+.regcust, .newcust {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  width: 700px;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: rgb(255, 255, 255);
+}
+.newcust span, .regcust span{
+  display: inline-block;
+  height: 1px;
+  width: 90%;
+  background-color: rgb(168, 168, 168);
+}
+
+#title2{
+  margin-top: 10px;
+  color: rgb(133, 133, 133);
+  font-size: 20px;
+  font-weight: lighter;
+}
+ul#ul{
+  margin: 10px 0;
+}
+ul#ul li{
+  margin: 4px 25px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgb(44, 44, 44);
+}
+
+button#lrbtn ,button#lbtn{
+  border-radius: 2px;
+  height: 50px;
+  width: 270px;
+}
+button#lrbtn, button#lbtn {background-color: rgb(255, 73, 73);border: 2px solid rgb(255,73,73);}
+button#lrbtn:hover, button#lbtn:hover {background-color: rgb(214, 32, 32);border: 1px solid rgb(253, 40, 40); }
+
+p#in{
+  color: #272727;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: normal;
+}
+input#lpage {
+  font-size: 18px;
+  color: #272727;
+  margin-bottom: 15px;
+  padding:  0 15px;
+  outline-color: rgb(94, 92, 92);
+  border-radius: 4px;
+  border: 2px solid rgb(172, 172, 172);
+  height: 45px;
+  width: 60%;
+}
+button#lbtn{
+  width: 150px;
+  margin-top: 68px;
+}
