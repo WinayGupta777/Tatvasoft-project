@@ -6,13 +6,14 @@ import ProductPage from "./components/ProductPage";
 import EditPage from "./components/EditPage";
 import CartPage from "./components/CartPage";
 import LoginPage from "./components/LoginPage";
+import RegisterPage from "./components/RegisterPage";
 import styles from "./App.css";
 const App=()=>{
   return(
     <>
       <NavBar />
       <SearchBar />
-      <LoginPage />
+      <RegisterPage />
       <Footer />
     </>
   );
