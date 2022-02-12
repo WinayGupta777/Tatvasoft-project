@@ -1,37 +1,39 @@
+import InputBox from "../inputBox";
 import TitleBar from "./TitleBar";
 
-const LoginPage=()=>{
-    return(
+const LoginPage = () => {
+    return (
         <div className="Login">
             <TitleBar title="Login or Create an Account" />
             <div className="Main-content">
-                <div className="newcust">
+                <div className="lpart">
                     <div>
-                        <p>New Customer</p>
-                        <span id="liti2"></span>
-                        <p id="title2">Registration is free and easy.</p>
+                        <div className="titles">
+                            <p>New Customer</p>
+                            <span></span>
+                            <p id="title2">Registration is free and easy.</p>
+                        </div>
                         <ul id="ul">
                             <li>Faster checkout</li>
                             <li>Save multiple shopping address</li>
                             <li>View and track orders and more</li>
                         </ul>
                     </div>
-                    <button id="lrbtn">Create an Account</button>
+                    <div><button id="newbtn">Create an Account</button></div>
                 </div>
-                <div className="regcust">
-                    <div>
+                <div className="rpart">
+                    <div className="titles">
                         <p>Registered Customers</p>
-                        <span id="liti2"></span>
+                        <span></span>
                         <p id="title2">If you have an account with us, please log in.</p>
-                        <form>
-                            <p id="in">Email Address *</p>
-                            <input type="email" required id="lpage"/>
-                            <p id="in">Password *</p>
-                            <input type="password" required  id="lpage"/>
-                            <br></br>
-                            <button type="submit" id="lbtn">Login</button>
-                        </form>
                     </div>
+                    <form>
+                        <div>
+                            <InputBox label="Email Address *" type="email" width="90%" />
+                            <InputBox label="Password *" type="password" width="90%" />
+                        </div>
+                        <button id="newbtn">Login</button>
+                    </form>
                 </div>
             </div>
         </div>
