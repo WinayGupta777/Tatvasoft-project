@@ -32,6 +32,7 @@ const LoginPage = () => {
                         <div>
                             <InputBox label="Email Address *" type="email" width="90%" />
                             <InputBox label="Password *" type="password" width="90%" />
+                            <a href="#" id="resetlink">Forgot Password?</a>
                         </div>
                         <button id="newbtn">Login</button>
                     </form>

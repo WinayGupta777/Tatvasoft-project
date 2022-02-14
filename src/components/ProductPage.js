@@ -1,6 +1,7 @@
 import TitleBar from "./TitleBar";
 import ProductSearch from "./ProductSearchBar";
 import ListChild from "./ProductListChild";
+import TableListing from "./ProList_table";
 import styles from "./ProductPage.css"
 
 const ProductPage=()=>{
@@ -48,9 +49,7 @@ const ProductPage=()=>{
         <div className="product">
             <TitleBar title="Product page"/>
             <ProductSearch />
-            {jsonFile.map(
-                (i)=><ListChild id={i.id} name={i.name} desc={i.desc} query={i.query} />
-            )}
+            <TableListing />
         </div>
     );
 }

@@ -7,17 +7,13 @@ import EditPage from "./components/EditPage";
 import CartPage from "./components/CartPage";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
+import TableListing from "./components/ProList_table";
 import styles from "./App.css";
 const App=()=>{
   return(
     <>
       <NavBar />
       <SearchBar />
-      <LoginPage />
-      <RegisterPage />
-      <ProductPage />
-      <EditPage />
-      <ProductListingPage />
       <CartPage />
       <Footer />
     </>

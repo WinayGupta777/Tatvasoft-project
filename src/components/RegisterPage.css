@@ -29,6 +29,8 @@
 }
 
 #register{
+  font-size: 22px;
+  color: white;
   border-radius: 2px;
   height: 50px;
   width: 170px;
