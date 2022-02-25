@@ -1,7 +1,7 @@
 
 /* Login page css */
 .Login{
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 0 200px;
   }
   .Main-content{
@@ -12,7 +12,8 @@
   }
   
   .lpart , .rpart{
-    height: 400px;
+    height: 420px;
+    max-height: 450px;
     width: 650px;
     display: flex;
     flex-direction: column;
@@ -20,7 +21,7 @@
   }
   
   .rpart > form {
-    height: 300px;
+    height: 330px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
