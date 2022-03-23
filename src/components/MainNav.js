@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./logo.png";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const NavBar=()=>{
     var navigate = useNavigate();
@@ -9,7 +9,7 @@ const NavBar=()=>{
             navigate("/login");
         }
         else {
-            navigate("register");
+            navigate("/register");
         }
     }
     return(
@@ -18,8 +18,8 @@ const NavBar=()=>{
                 <img src={logo}></img>
             </div>
             <div className="rside">
-                <a id="link" href="" onClick={()=>navigateMe("login")}>Login</a><span id="liti"></span>
-                <a id="link" href="" onClick={()=>navigateMe("register")}>Register</a>
+                <a id="link" onClick={()=>navigateMe("login")}>Login</a><span id="liti"></span>
+                <a id="link" onClick={()=>navigateMe("register")}>Register</a>
                 <div className="cartbox">
                     <i className="fa fa-shopping-cart"></i>
                     <span className="itemTxt">0</span>
