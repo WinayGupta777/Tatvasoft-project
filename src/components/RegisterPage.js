@@ -4,6 +4,7 @@ import styles from "./RegisterPage.css"
 import { useState } from "react";
 import axios from "axios";
 import ShowMsg from "./showMsg";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
     const [fname,setFname]= useState("");
@@ -13,6 +14,7 @@ const RegisterPage = () => {
     const [Cpassword,setCpasswd]= useState("");
     const [msg, setMsg] = useState(null);
     const [status, setStatus] = useState(false);
+    const navigate = useNavigate();
     
     const setValues=(verb,e)=>{
         if(verb=="fname"){setFname(e.target.value)}
@@ -23,9 +25,9 @@ const RegisterPage = () => {
     }
     const onSubmited=(e)=>{
         e.preventDefault();
-        console.log("submitted");
+        console.log("RegisterPage: Submit pressed.");
         if (password == Cpassword){
-            console.log("True");
+            console.log("Password are matching");
             axios.post("http://localhost:8080/signup",{
                 fname:fname, 
                 lname:lname,
@@ -36,7 +38,11 @@ const RegisterPage = () => {
                 setMsg(r.data.message);
                 console.log(r.data);
             })
-            .catch((e)=>console.log(e));
+            .catch((e)=>{
+                console.log(e);
+                setMsg(e.message);
+                putError();
+            });
         }else{
             setMsg("Password are not matching");
         }
@@ -46,6 +52,11 @@ const RegisterPage = () => {
             setMsg(null)
         }, 4000);
         return(<ShowMsg msg={msg} />);
+    }
+    const navigateTo=()=>{
+        setTimeout(() => {
+            navigate("/cartpage");
+        }, 2000);
     }
     return (
         <div className="Register">
@@ -75,6 +86,7 @@ const RegisterPage = () => {
                         <InputBox label="Confirm Password *" type="password" width="590px" onChangeMethod={(e)=>setValues("cpass",e)}/>
                     </div>
                     {msg ? putError() : null}
+                    {status ? navigateTo(): null}
                     <button type="submit" id="register">Register</button>
                 </form>
             </div>
