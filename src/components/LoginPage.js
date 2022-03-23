@@ -4,7 +4,7 @@ import styles from "./LoginPage.css";
 import { useState } from "react";
 import axios from "axios";
 import ShowMsg from "./showMsg";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
     const [email,setEmail]= useState("");
@@ -19,16 +19,20 @@ const LoginPage = () => {
     }
     const onSubmited=(e)=>{
         e.preventDefault();
-        console.log("submitted");
+        console.log("LoginPage: Submit pressed.");
         axios.post("http://localhost:8080/signin",{
                 email:email, 
                 password:password
         }).then((r)=>{
                 setStatus(r.data.status);
                 setMsg(r.data.message);
-                console.log(msg);
+                console.log(r.data);
         })
-        .catch((e)=>console.log(e));
+        .catch((e)=>{
+            console.log(e.message)
+            setMsg(e.message);
+            putError()
+        });
     }
     const putError=()=>{
         setTimeout(() => {
@@ -38,6 +42,11 @@ const LoginPage = () => {
     }
     const navigateMe=()=>{
         navigate("/register");
+    }
+    const navigateTo=()=>{
+        setTimeout(() => {
+            navigate("/cartpage");
+        }, 2000);
     }
 
     return (
@@ -71,6 +80,7 @@ const LoginPage = () => {
                             <InputBox label="Password *" type="password" width="90%" onChangeMethod={(e)=>setValues("pass",e)}/>
                             <a href="#" id="resetlink">Forgot Password?</a>
                             {msg ? putError() : null}
+                            {status ? navigateTo() : null}
                         </div>
                         <button id="newbtn">Login</button>
                     </form>
