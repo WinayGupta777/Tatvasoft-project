@@ -10,9 +10,13 @@ import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
 import TableListing from "./components/ProList_table";
 import styles from "./App.css";
+
+import { Provider } from "react-redux";
+import store from "./redux/store";
 const App=()=>{
   return(
-    <>
+    <Provider store={store}>
+      <>
       <Router>
         <NavBar />
         <SearchBar />
@@ -27,6 +31,7 @@ const App=()=>{
       </Router>
       <Footer />
     </>
+    </Provider>
   );
 }
 

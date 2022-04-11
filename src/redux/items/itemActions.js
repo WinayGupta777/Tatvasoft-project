@@ -14,5 +14,4 @@ const decreaseItem=()=>{
         type: SUB_MORE
     }
 }
-export default increaseItem;
-export default decreaseItem;
+export {increaseItem, decreaseItem }

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.png";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const NavBar=()=>{
     var navigate = useNavigate();
@@ -12,6 +13,9 @@ const NavBar=()=>{
             navigate("/register");
         }
     }
+    const citems = useSelector(
+        (state)=>state.items
+    );
     return(
         <div className="navbar">
             <div className="lside logo">
@@ -22,7 +26,7 @@ const NavBar=()=>{
                 <a id="link" onClick={()=>navigateMe("register")}>Register</a>
                 <div className="cartbox">
                     <i className="fa fa-shopping-cart"></i>
-                    <span className="itemTxt">0</span>
+                    <span className="itemTxt">{citems}</span>
                     <span className="cartTxt">Cart</span>
                 </div>
             </div>
