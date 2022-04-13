@@ -2,6 +2,7 @@ import Card from "./CartCard";
 import TitleBar from "./TitleBar";
 import styles from "./CartPage.css"
 import { useState,useEffect } from "react";
+import { useSelector } from "react-redux";
 import axios from "axios";
 
 // const cartItems=[
@@ -33,14 +34,17 @@ const CartPage=()=>{
 
 
     useEffect(() => {
-        var r = axios.post("http://localhost:8080/getDetails")
+        var r = axios.post("http://localhost:8080/getCartedItems")
         r.then((r)=>{
-            console.log(r.data.details[0].item_name)
+            console.log(r.data.details[0].ItemName)
             setItems(r.data.details);
         })
         r.catch((err)=>console.log(err))
     },[]);
 
+    const citems = useSelector(
+        (state)=>state.items
+    );
 
 
     return(
@@ -48,9 +52,9 @@ const CartPage=()=>{
         <TitleBar title="Cart Page" />
         <div className="cart">
             <div className="center">
-                <h3>My Shopping Bag  ({cartItems.length} Items)</h3>
+                <h3>My Shopping Bag  ({citems} Items)</h3>
                 {cartItems.map(
-                    (i)=><Card itemname={i.item_name}  oprice={i.original_price}  rprice={i.real_price}/>
+                    (i)=><Card itemname={i.ItemName}  oprice={i.O_price}  rprice={i.R_price}/>
                 )}
                 <button id="placeorder">Place order</button>
             </div>

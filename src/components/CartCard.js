@@ -1,11 +1,20 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { increaseItem, decreaseItem } from "../redux/items/itemActions";
 
 const Card=(props)=>{
     const [count,setCount] = useState(1);
+    const dispatch = useDispatch()
 
-    const onPlus=()=>{setCount(count + 1);}
+    const onPlus=()=>{
+        setCount(count + 1);
+        dispatch(increaseItem());
+    }
     const onMinus=()=>{
-        if (count > 1) {setCount(count - 1);}
+        if (count > 1) {
+            setCount(count - 1);
+            dispatch(decreaseItem());
+        }
     }
     return(
         <div className="card">
