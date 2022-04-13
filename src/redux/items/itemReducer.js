@@ -1,7 +1,7 @@
 import { ADD_MORE } from "./itemType"
 import { SUB_MORE } from "./itemType"
 const initalState = {
-    items: 550
+    items: 0
 }
 
 const itemReducer=(state = initalState, action)=>{
