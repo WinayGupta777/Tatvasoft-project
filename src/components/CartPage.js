@@ -34,31 +34,50 @@ const CartPage=()=>{
 
 
     useEffect(() => {
+        var timeOut = setTimeout(()=>tick(),1000)
+    },[]);
+
+    const tick=()=>{
+        console.log("Running Tick()");
         var r = axios.post("http://localhost:8080/getCartedItems")
         r.then((r)=>{
-            console.log(r.data.details[0].ItemName)
+            console.log("Remaining : "+r.data.details)
             setItems(r.data.details);
         })
         r.catch((err)=>console.log(err))
-    },[]);
+    }
+
 
     const citems = useSelector(
         (state)=>state.items
     );
 
+    const onRemoveItem=(itemname)=>{
+        axios.post("http://localhost:8080/deleteCartItem",{
+            ItemName: itemname
+        })
+        .then((r)=>{
+            console.log("ItemRemoved: " + r.data)
+        })
+        .catch((err)=>console.log(err));
+        setTimeout(()=>tick(),2000);
+    }
+    
+
 
     return(
         <>
-        <TitleBar title="Cart Page" />
-        <div className="cart">
-            <div className="center">
-                <h3>My Shopping Bag  ({citems} Items)</h3>
-                {cartItems.map(
-                    (i)=><Card itemname={i.ItemName}  oprice={i.O_price}  rprice={i.R_price}/>
-                )}
-                <button id="placeorder">Place order</button>
-            </div>
-        </div>  
+            {console.log("Rendernig All Card")}
+            <TitleBar title="Cart Page" />
+            <div className="cart">
+                <div className="center">
+                    <h3>My Shopping Bag  ({citems} Items)</h3>
+                    {cartItems.length != 0 ?  cartItems.map(
+                        (i, key)=><Card key={key} itemname={i.ItemName}  oprice={i.O_price}  rprice={i.R_price} runOnRemove={onRemoveItem} />
+                    ) : <h1>Nothing in Cart</h1>}
+                    <button id="placeorder">Place order</button>
+                </div>
+            </div>  
         </>
     );
 }

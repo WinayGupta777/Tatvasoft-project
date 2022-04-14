@@ -26,6 +26,12 @@ const SingleProduct=(props)=>{
     const removed=()=>{
         setState(!state);
         dispatch(decreaseItem());
+
+        axios.post("http://localhost:8080/deleteCartItem",{
+            ItemName: props.name
+        })
+        .then((r)=>console.log(r))
+        .catch((err)=>console.log(err));
     }
     return( 
         <div className="productbox">
