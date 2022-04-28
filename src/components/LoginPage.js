@@ -1,6 +1,6 @@
 import InputBox from "./inputBox";
 import TitleBar from "./TitleBar";
-import styles from "./LoginPage.css";
+import"./LoginPage.css";
 import { useState } from "react";
 import axios from "axios";
 import ShowMsg from "./showMsg";
@@ -14,8 +14,8 @@ const LoginPage = () => {
     const navigate = useNavigate();
 
     const setValues=(verb,e)=>{
-        if(verb=="email"){setEmail(e.target.value)}
-        if(verb=="pass"){setPasswd(e.target.value)}
+        if(verb==="email"){setEmail(e.target.value)}
+        if(verb==="pass"){setPasswd(e.target.value)}
     }
     const onSubmited=(e)=>{
         e.preventDefault();
@@ -78,7 +78,7 @@ const LoginPage = () => {
                         <div>
                             <InputBox label="Email Address *" type="email" width="90%" onChangeMethod={(e)=>setValues("email",e)}/>
                             <InputBox label="Password *" type="password" width="90%" onChangeMethod={(e)=>setValues("pass",e)}/>
-                            <a href="#" id="resetlink">Forgot Password?</a>
+                            <a href="" id="resetlink">Forgot Password?</a>
                             {msg ? putError() : null}
                             {status ? navigateTo() : null}
                         </div>

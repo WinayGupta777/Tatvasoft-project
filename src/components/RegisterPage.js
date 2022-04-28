@@ -1,6 +1,6 @@
 import TitleBar from "./TitleBar";
 import InputBox from "./inputBox";
-import styles from "./RegisterPage.css"
+import  "./RegisterPage.css"
 import { useState } from "react";
 import axios from "axios";
 import ShowMsg from "./showMsg";
@@ -17,16 +17,16 @@ const RegisterPage = () => {
     const navigate = useNavigate();
     
     const setValues=(verb,e)=>{
-        if(verb=="fname"){setFname(e.target.value)}
-        if(verb=="lname"){setLname(e.target.value)}
-        if(verb=="email"){setEmail(e.target.value)}
-        if(verb=="pass"){setPasswd(e.target.value)}
-        if(verb=="cpass"){setCpasswd(e.target.value)}
+        if(verb==="fname"){setFname(e.target.value)}
+        if(verb==="lname"){setLname(e.target.value)}
+        if(verb==="email"){setEmail(e.target.value)}
+        if(verb==="pass"){setPasswd(e.target.value)}
+        if(verb==="cpass"){setCpasswd(e.target.value)}
     }
     const onSubmited=(e)=>{
         e.preventDefault();
         console.log("RegisterPage: Submit pressed.");
-        if (password == Cpassword){
+        if (password === Cpassword){
             console.log("Password are matching");
             axios.post("http://localhost:8080/signup",{
                 fname:fname, 

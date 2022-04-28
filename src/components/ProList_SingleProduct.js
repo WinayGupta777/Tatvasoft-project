@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+//import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { increaseItem, decreaseItem } from "../redux/items/itemActions";
 import axios from "axios";
 
 const SingleProduct=(props)=>{
     const [state, setState]= useState(true);
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     const dispatch = useDispatch();
 
 
@@ -36,7 +36,7 @@ const SingleProduct=(props)=>{
     return( 
         <div className="productbox">
             <div className="img_pro">
-                <img src={props.imgurl}></img>
+                <img src={props.imgurl} alt="ImageOfProduct" ></img>
             </div>
             <div className="titlebox">{props.name}</div>
             <div className="descbox">
@@ -47,7 +47,7 @@ const SingleProduct=(props)=>{
                 <div id="two"><p>₹ {props.rprice}</p></div>
             </div>
             {/* <FlipButton /> */}
-            { state==true ?
+            { state===true ?
                 <div className="add2cart">
                     <button onClick={added2cart}>ADD TO CART</button>
                 </div>    

@@ -14,7 +14,7 @@ const AllProducts=()=>{
     },[]);
     return(
         <div className="MainBox">
-            {productItems.length != 0 ?  productItems.map(
+            {productItems.length !== 0 ?  productItems.map(
                     (i, key)=><SingleProduct name={i.ItemName} desc={i.Description}  imgurl={i.Url} oprice={i.O_price} rprice={i.R_price} key={key} />
             ) : <h1>Fetching Details From Server</h1>}
         </div>

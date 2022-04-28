@@ -1,4 +1,4 @@
-import styles from "./InputBox.css";
+import "./InputBox.css";
 
 const InputBox=(props)=>{
     return(

@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const NavBar=()=>{
     var navigate = useNavigate();
     const navigateMe=(flag)=>{
-        if (flag == "login") {
+        if (flag === "login") {
             navigate("/login");
         }
         else {
@@ -19,7 +19,7 @@ const NavBar=()=>{
     return(
         <div className="navbar">
             <div className="lside logo">
-                <img src={logo}></img>
+                <img src={logo} alt="NavLogo"></img>
             </div>
             <div className="rside">
                 <a id="link" onClick={()=>navigateMe("login")}>Login</a><span id="liti"></span>

@@ -1,4 +1,4 @@
-import TitleBar from "./TitleBar";
+import "./TitleBar";
 const ProductSearch=()=>{
     return(
         <div className="pro-search">

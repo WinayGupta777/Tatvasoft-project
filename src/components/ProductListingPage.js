@@ -1,7 +1,7 @@
 import TitleBar from "./TitleBar";
 import AllProducts from "./ProList_AllProduct";
 import SortBy from "./ProList_SortBy";
-import styles from "./ProductListingPage.css"
+import "./ProductListingPage.css"
 import "./RedButton.css"
 import { useNavigate } from "react-router";
 

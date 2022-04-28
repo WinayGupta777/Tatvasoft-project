@@ -1,4 +1,4 @@
-import styles from "./showMsg.css";
+import "./showMsg.css";
 
 const ShowMsg=(props)=>{
     return(

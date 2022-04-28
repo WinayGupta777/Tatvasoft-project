@@ -1,6 +1,6 @@
 import Card from "./CartCard";
 import TitleBar from "./TitleBar";
-import styles from "./CartPage.css"
+import "./CartPage.css"
 import { useState,useEffect } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
@@ -30,7 +30,7 @@ import axios from "axios";
 
 const CartPage=()=>{
     const [cartItems, setItems] = useState([]);
-    const [status, setStatus] = useState(false);
+    //const [status, setStatus] = useState(false);
 
 
     useEffect(() => {
@@ -72,7 +72,7 @@ const CartPage=()=>{
             <div className="cart">
                 <div className="center">
                     <h3>My Shopping Bag  ({citems} Items)</h3>
-                    {cartItems.length != 0 ?  cartItems.map(
+                    {cartItems.length !== 0 ?  cartItems.map(
                         (i, key)=><Card key={key} itemname={i.ItemName}  oprice={i.O_price}  rprice={i.R_price} runOnRemove={onRemoveItem} />
                     ) : <h1>Nothing in Cart</h1>}
                     <button id="placeorder">Place order</button>
